@@ -2,30 +2,37 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    private Collider2D doorCollider;
-    private SpriteRenderer sr;
+    public float openHeight = 3f;
+    public float moveSpeed = 4f;
+
+    private Vector3 closedPosition;
+    private Vector3 openPosition;
+    private bool isOpen = false;
 
     void Start()
     {
-        doorCollider = GetComponent<Collider2D>();
-        sr = GetComponent<SpriteRenderer>();
+        closedPosition = transform.position;
+        openPosition = closedPosition + new Vector3(0, openHeight, 0);
+    }
+
+    void Update()
+    {
+        Vector3 targetPosition = isOpen ? openPosition : closedPosition;
+
+        transform.position = Vector3.MoveTowards(
+            transform.position,
+            targetPosition,
+            moveSpeed * Time.deltaTime
+        );
     }
 
     public void Open()
     {
-        doorCollider.enabled = false;
-
-        Color c = sr.color;
-        c.a = 0.3f;
-        sr.color = c;
+        isOpen = true;
     }
 
     public void Close()
     {
-        doorCollider.enabled = true;
-
-        Color c = sr.color;
-        c.a = 1f;
-        sr.color = c;
+        isOpen = false;
     }
 }
