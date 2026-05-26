@@ -1,8 +1,8 @@
-# Echo Shift — Initial Game Design Document
+# Rewind Protocol — Initial Game Design Document
 
 ## 1. Overview
 
-Echo Shift is a 2D puzzle platformer built in Unity, centered around a time-replay mechanic. Players must solve environmental puzzles by cooperating with recorded versions of their past actions.
+Rewind Protocol is a 2D puzzle platformer built in Unity, centered around a time-replay mechanic. Players must solve environmental puzzles by cooperating with recorded versions of their past actions.
 
 The game explores themes of time, causality, and self-cooperation, where progress depends not on individual skill alone, but on planning across multiple time loops.
 
@@ -201,6 +201,6 @@ This ensures predictable and manageable puzzle logic.
 
 ## 13. Summary
 
-Echo Shift is a focused, mechanic-driven puzzle game that emphasizes clarity, design, and technical implementation. By limiting scope and refining a single core system, the project aims to deliver a polished and conceptually strong gameplay experience suitable for both academic evaluation and portfolio presentation.
+Rewind Protocol is a focused, mechanic-driven puzzle game that emphasizes clarity, design, and technical implementation. By limiting scope and refining a single core system, the project aims to deliver a polished and conceptually strong gameplay experience suitable for both academic evaluation and portfolio presentation.
 
 ---

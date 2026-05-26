@@ -1,10 +1,10 @@
-# Echo Shift
+# Rewind-Protocol
 
 A 2D pixel-art puzzle platformer built with Unity.
 
 ## About
 
-**Echo Shift** is a sci-fi themed platformer where the player manipulates time echoes to solve puzzles, avoid hazards, and progress through mysterious environments.
+**Rewind Protocol** is a sci-fi themed platformer where the player manipulates time echoes to solve puzzles, avoid hazards, and progress through mysterious environments.
 
 The game focuses on:
 
