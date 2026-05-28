@@ -64,7 +64,8 @@ More systems, artwork, and gameplay features will be added over time.
 
 ## Screenshots
 
-<img width="780" height="385" alt="image" src="https://github.com/user-attachments/assets/b35e895b-8a06-4a0c-85b8-3666166d3d97" />
+<img width="1512" height="949" alt="image" src="https://github.com/user-attachments/assets/11d10b99-2325-42c7-96ef-aef7908893b5" />
+
 
 
 ---
