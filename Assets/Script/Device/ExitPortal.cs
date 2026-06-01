@@ -6,6 +6,13 @@ public class ExitPortal : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            PlayerRecorder recorder = other.GetComponent<PlayerRecorder>();
+
+            if (recorder != null)
+            {
+                recorder.CompleteLevel();
+            }
+
             Debug.Log("Level Complete!");
         }
     }

@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class PressureButton : MonoBehaviour
 {
-    public Door targetDoor;
-
     public Sprite buttonOffSprite;
     public Sprite buttonOnSprite;
+    public Door targetDoor;
+    public DoorController targetDoorController;
 
     private SpriteRenderer sr;
 
@@ -25,7 +25,18 @@ public class PressureButton : MonoBehaviour
 
             sr.sprite = buttonOnSprite;
 
-            targetDoor.Open();
+            if (targetDoorController != null)
+            {
+                targetDoorController.SetPressureButtonActive(true);
+            }
+            else if (targetDoor != null)
+            {
+                targetDoor.SetPressureButtonActive(true);
+            }
+            else
+            {
+                Debug.LogWarning("PressureButton target door is not assigned.", this);
+            }
         }
     }
 
@@ -41,7 +52,18 @@ public class PressureButton : MonoBehaviour
 
                 sr.sprite = buttonOffSprite;
 
-                targetDoor.Close();
+                if (targetDoorController != null)
+                {
+                    targetDoorController.SetPressureButtonActive(false);
+                }
+                else if (targetDoor != null)
+                {
+                    targetDoor.SetPressureButtonActive(false);
+                }
+                else
+                {
+                    Debug.LogWarning("PressureButton target door is not assigned.", this);
+                }
             }
         }
     }

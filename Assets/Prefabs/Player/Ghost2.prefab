@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6711344963385482473}
   - component: {fileID: -1706386139833886365}
   m_Layer: 0
-  m_Name: Ghost
+  m_Name: Ghost2
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,3 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38c8f28b3593d4b9d9ad2bb3d79cfb71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfterPlayback: 1
+  stayDuration: 9
+  timerText: {fileID: 0}

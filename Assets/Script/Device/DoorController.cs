@@ -1,10 +1,11 @@
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class DoorController : MonoBehaviour
 {
     public float openHeight = 3f;
     public float moveSpeed = 4f;
     public bool pressureButtonActive = false;
+    public bool touchButtonActive = false;
 
     private Vector3 closedPosition;
     private Vector3 openPosition;
@@ -40,7 +41,18 @@ public class Door : MonoBehaviour
     public void SetPressureButtonActive(bool active)
     {
         pressureButtonActive = active;
-        if (pressureButtonActive)
+        UpdateButtonControlledState();
+    }
+
+    public void SetTouchButtonActive(bool active)
+    {
+        touchButtonActive = active;
+        UpdateButtonControlledState();
+    }
+
+    private void UpdateButtonControlledState()
+    {
+        if (pressureButtonActive && touchButtonActive)
         {
             Open();
         }

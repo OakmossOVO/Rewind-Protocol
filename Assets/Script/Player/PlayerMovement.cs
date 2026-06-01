@@ -5,6 +5,9 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
 
+    public float leftBound = -15f;
+    public float rightBound = 15f;
+
     public Sprite standSprite;
     public Sprite runSprite;
 
@@ -38,6 +41,16 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
+
+        Vector3 clampedPosition = transform.position;
+
+        clampedPosition.x = Mathf.Clamp(
+            clampedPosition.x,
+            leftBound,
+            rightBound
+        );
+
+        transform.position = clampedPosition;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
