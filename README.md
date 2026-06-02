@@ -252,9 +252,7 @@ Level 5 → Final Combined Challenge
 
 Add gameplay screenshots here.
 
-```md
 <img width="1512" height="949" alt="image" src="https://github.com/user-attachments/assets/2cad290d-c791-443e-ba6e-ba2048953140" />
-```
 
 ---
 
