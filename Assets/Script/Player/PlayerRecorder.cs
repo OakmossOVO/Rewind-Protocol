@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerRecorder : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PlayerRecorder : MonoBehaviour
 
     private List<Vector3> recordedPositions = new List<Vector3>();
     private List<GameObject> spawnedGhosts = new List<GameObject>();
+    private List<bool> recordedFlipX = new List<bool>();
 
     private Vector3 recordingStartPosition;
 
@@ -46,11 +48,16 @@ public class PlayerRecorder : MonoBehaviour
         if (isRecording)
         {
             recordedPositions.Add(transform.position);
+
+            SpriteRenderer playerRenderer = GetComponent<SpriteRenderer>();
+            recordedFlipX.Add(playerRenderer.flipX);
         }
     }
 
     void StartRecording()
     {
+        recordedFlipX.Clear();
+        
         if (spawnedGhosts.Count >= maxGhosts)
         {
             Debug.Log("Ghost limit reached!");
@@ -90,7 +97,7 @@ public class PlayerRecorder : MonoBehaviour
 
         GhostPlayback playback = ghost.GetComponent<GhostPlayback>();
         playback.timerText = ghostTimerText;
-        playback.SetPath(recordedPositions);
+        playback.SetPath(recordedPositions, recordedFlipX);
 
         playback.OnPlaybackFinished += () =>
         {
@@ -153,27 +160,7 @@ public class PlayerRecorder : MonoBehaviour
 
     void ResetLevelAttempt()
     {
-        transform.position = recordingStartPosition;
-
-        if (rb != null)
-        {
-            rb.simulated = true;
-            rb.velocity = Vector2.zero;
-        }
-
-        if (sr != null)
-            sr.enabled = true;
-
-        if (movement != null)
-            movement.enabled = true;
-
-        recordedPositions.Clear();
-        isWaitingForGhost = false;
-        isRecording = false;
-
-        StartRecording();
-
-        Debug.Log("Level attempt reset. Recording restarted.");
+        ReloadCurrentScene();
     }
 
     void UpdateHintText()
@@ -203,38 +190,14 @@ public class PlayerRecorder : MonoBehaviour
         levelCompleted = true;
     }
 
-    public void ResetCurrentAttempt(Vector3 resetPosition)
+    public void ResetCurrentAttempt()
     {
-        transform.position = resetPosition;
+        ReloadCurrentScene();
+    }
 
-        if (rb != null)
-        {
-            rb.simulated = true;
-            rb.velocity = Vector2.zero;
-        }
-
-        if (sr != null)
-            sr.enabled = true;
-
-        if (movement != null)
-            movement.enabled = true;
-
-        foreach (GameObject ghost in spawnedGhosts)
-        {
-            if (ghost != null)
-                Destroy(ghost);
-        }
-
-        spawnedGhosts.Clear();
-        recordedPositions.Clear();
-
-        isWaitingForGhost = false;
-        isRecording = false;
-
-        StartRecording();
-
-        UpdateHintText();
-
-        Debug.Log("Player fell. Level attempt reset.");
+    private void ReloadCurrentScene()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.buildIndex);
     }
 }

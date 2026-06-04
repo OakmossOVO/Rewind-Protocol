@@ -2,18 +2,30 @@ using UnityEngine;
 
 public class ExitPortal : MonoBehaviour
 {
+    public LevelTransition levelTransition;
+
+    private bool triggered = false;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (triggered) return;
+
         if (other.CompareTag("Player"))
         {
-            PlayerRecorder recorder = other.GetComponent<PlayerRecorder>();
+            triggered = true;
+
+            PlayerRecorder recorder =
+                other.GetComponent<PlayerRecorder>();
 
             if (recorder != null)
             {
                 recorder.CompleteLevel();
             }
 
-            Debug.Log("Level Complete!");
+            levelTransition.StartTransition(
+                other.gameObject,
+                transform
+            );
         }
     }
 }

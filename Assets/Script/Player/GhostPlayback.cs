@@ -7,6 +7,8 @@ using TMPro;
 public class GhostPlayback : MonoBehaviour
 {
     private List<Vector3> path;
+    private List<bool> flipXStates;
+
     private int index = 0;
     private bool playbackFinished = false;
 
@@ -18,9 +20,18 @@ public class GhostPlayback : MonoBehaviour
     public Action OnPlaybackFinished;
     public Action OnGhostExpired;
 
-    public void SetPath(List<Vector3> recordedPath)
+    private SpriteRenderer sr;
+
+    void Awake()
+    {
+        sr = GetComponent<SpriteRenderer>();
+    }
+
+    public void SetPath(List<Vector3> recordedPath, List<bool> recordedFlipX)
     {
         path = new List<Vector3>(recordedPath);
+        flipXStates = new List<bool>(recordedFlipX);
+
         index = 0;
         playbackFinished = false;
     }
@@ -33,6 +44,12 @@ public class GhostPlayback : MonoBehaviour
         if (index < path.Count)
         {
             transform.position = path[index];
+
+            if (sr != null && flipXStates != null && index < flipXStates.Count)
+            {
+                sr.flipX = flipXStates[index];
+            }
+
             index++;
         }
         else
@@ -71,7 +88,6 @@ public class GhostPlayback : MonoBehaviour
 
         if (timerText != null)
         {
-            timerText.text = "Ghost Time Left: 0.0s";
             timerText.gameObject.SetActive(false);
         }
 
