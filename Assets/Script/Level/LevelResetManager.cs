@@ -3,24 +3,22 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class FallReset : MonoBehaviour
+public class LevelResetManager : MonoBehaviour
 {
     public Image fadeOverlay;
     public float fadeDuration = 0.5f;
 
     private bool isResetting = false;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void Update()
     {
-        if (isResetting) return;
-
-        if (other.CompareTag("Player"))
+        if (Input.GetKeyDown(KeyCode.R) && !isResetting)
         {
-            StartCoroutine(FallResetRoutine());
+            StartCoroutine(ResetCurrentLevel());
         }
     }
 
-    private IEnumerator FallResetRoutine()
+    IEnumerator ResetCurrentLevel()
     {
         isResetting = true;
 

@@ -177,7 +177,7 @@ public class PlayerRecorder : MonoBehaviour
         }
         else if (spawnedGhosts.Count >= maxGhosts)
         {
-            hintText.text = "Ghost Active";
+            hintText.text = "Ghost active\n(Press R to reset)";
         }
         else
         {
