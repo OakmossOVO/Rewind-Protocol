@@ -1,265 +1,189 @@
 # Rewind Protocol
 
-> Work with your past self to escape a collapsing temporal simulation.
+## Game Title
 
-A 2D puzzle-platformer built in Unity where players solve environmental puzzles by collaborating with time-replayed versions of themselves.
+**Rewind Protocol**
 
 ---
 
-## Overview
+## Short Description
 
-Rewind Protocol is a minimalist sci-fi puzzle platformer centered around a temporal replay mechanic. Players record their actions, create replayed versions of themselves, and cooperate with their past selves to overcome obstacles and solve environmental puzzles.
+Rewind Protocol is a 2D puzzle-platformer developed in Unity.
 
-The game gradually introduces new challenges and combines them into increasingly complex scenarios, encouraging strategic planning, timing, and coordination between the player and their temporal echoes.
+Players must escape a simulated environment by cooperating with temporal echoes of their past actions. By recording their movements and replaying them as ghosts, players solve environmental puzzles, activate mechanisms, and progress through increasingly challenging levels.
+
+The game combines platforming and puzzle-solving mechanics with a minimalist sci-fi aesthetic inspired by themes of time manipulation and simulation systems.
 
 ---
 
 ## Features
 
-- Time replay puzzle mechanics
-- Ghost-player cooperation
-- Timed ghost persistence system
-- Platforming challenges
-- Multi-condition button and door puzzles
-- Automatic level reset system
-- Progressive puzzle difficulty
-- Minimalist pixel-art sci-fi aesthetic
-
----
-
-## Gameplay
-
-The core mechanic of Rewind Protocol revolves around recording and replaying actions.
-
-At the beginning of an attempt, the player's actions are automatically recorded.
-
-After ending a recording:
-
-1. A ghost is created.
-2. The ghost replays the recorded movement.
-3. The player returns to the starting position.
-4. The player and ghost must work together to solve the puzzle.
-
-As the game progresses, additional constraints are introduced, including limited ghost lifetimes and multi-step puzzle interactions.
-
----
-
-## Level Progression
-
-### Level 1 — Introduction
-
-Introduces the replay mechanic.
-
-Objectives:
-
-- Record movement
-- Create a ghost
-- Use the ghost to hold a button
-- Open a door and reach the exit
-
-Introduced Mechanics:
-
-- Ghost recording
-- Ghost replay
-- Pressure buttons
-- Basic door puzzle
-
----
-
-### Level 2 — Platforming Challenge
-
-Introduces environmental hazards.
-
-Objectives:
-
-- Jump across gaps
-- Avoid falling
-- Reach the exit
-
-Introduced Mechanics:
-
-- Platforming
-- Respawn system
-- Gap traversal
-
----
-
-### Level 3 — Timed Ghost
-
-Introduces time pressure.
-
-Objectives:
-
-- Complete puzzles before the ghost expires
-- Manage limited ghost lifetime
-
-Introduced Mechanics:
-
-- Timed ghost persistence
-- Automatic puzzle reset
-- Countdown system
-
----
-
-### Level 4 — Dual-Button Cooperation
-
-Introduces cooperative puzzle solving.
-
-Objectives:
-
-- Use a ghost to hold a pressure button
-- Activate a second button as the player
-- Open a door requiring two conditions
-
-Introduced Mechanics:
-
-- Dual-button puzzles
-- Simultaneous activation requirements
-- Ghost-player cooperation
-
----
-
-### Level 5 — Final Challenge
-
-Combines all previously introduced mechanics.
-
-Objectives:
-
-- Coordinate with a ghost
-- Manage time constraints
-- Traverse platforming challenges
-- Complete a multi-step puzzle sequence
-
-Introduced Mechanics:
-
-- Combined puzzle systems
-- Advanced planning and execution
-- Final mastery challenge
+- Time recording and replay system
+- Ghost-based puzzle solving
+- Five progressively challenging levels
+- Timed ghost mechanics
+- Multi-stage puzzle interactions
+- Intro, mid-game, and ending story sequences
+- Pixel-art sci-fi visual style
+- Background music and scene-specific audio
+- Scene transition effects
+- Pause menu system
+- Manual and automatic level reset systems
 
 ---
 
 ## Controls
 
 | Key | Action |
-|-------|--------|
+|------|---------|
 | A / D | Move Left / Right |
 | Space | Jump |
 | E | End Recording |
-
-Recording begins automatically when a level starts.
-
----
-
-## Visual Style
-
-Rewind Protocol uses a minimalist sci-fi pixel-art aesthetic.
-
-### Design Goals
-
-- Clean visual readability
-- Strong puzzle clarity
-- Cold technological atmosphere
-- Minimal visual noise
-
-### Color Palette
-
-| Purpose | Color |
-|----------|----------|
-| Background | #0B1517 |
-| Dark Panels | #102328 |
-| Interactive Elements | #52B2CD |
-| Secondary Highlights | #16749D |
-| UI Elements | #CDDCDE |
-| Neutral Accents | #8C8C8E |
+| R | Restart Current Level |
+| Mouse | Interact with UI |
+| Pause Button | Open Pause Menu |
 
 ---
 
-## Technical Details
+## How to Run
+
+### Option 1: Unity Editor
+
+1. Open the project in Unity.
+2. Open the `MainMenu` scene.
+3. Press the Play button in the Unity Editor.
+
+### Option 2: Build
+
+1. Build the project through Unity.
+2. Run the generated executable.
+3. Start the game from the Main Menu.
+
+---
+
+## Unity Version
+
+Developed using:
+
+Unity 2022.3 LTS
+
+---
+
+## Current Status
+
+### Project Status
+
+Completed Prototype
+
+Implemented:
+
+- Main Menu
+- Intro Story Sequence
+- Levels 1–5
+- Mid-Game Story Sequence
+- Ending Sequence
+- Ghost Replay System
+- Timed Ghost System
+- Audio Management System
+- Pause Menu
+- Scene Transitions
+- Reset Systems
+
+The game is fully playable from beginning to end.
+
+---
+
+## Level Overview
+
+### Level 1
+Introduction to recording and replay mechanics.
+
+### Level 2
+Introduces platforming challenges and gap navigation.
+
+### Level 3
+Introduces timed ghost persistence and resource management.
+
+### Mid-Game Story
+System warning sequence introducing synchronization instability.
+
+### Level 4
+Requires cooperation between the player and a ghost using dual-button mechanisms.
+
+### Level 5
+Final puzzle challenge combining previously introduced mechanics.
+
+---
+
+## Known Issues
+
+- Minor UI alignment differences may occur on unusual screen resolutions.
+- Some transition timings may vary depending on frame rate.
+- Additional polish and balancing could further improve the gameplay experience.
+
+---
+
+## Credits
+
+### Development
+
+- Game Design: Yixuan Liu
+- Programming: Yixuan Liu
+- Level Design: Yixuan Liu
+- UI Design: Yixuan Liu
 
 ### Engine
 
-- Unity
-- Universal Render Pipeline (URP)
+- Unity Engine
 
-### Programming
+### Fonts
 
-- C#
+- Various free-to-use pixel fonts
 
-### Tools
+### Audio
 
-- TextMeshPro
-- Unity 2D Physics
-- Pixel Perfect Camera
-
-### Systems Implemented
-
-- Replay Recording System
-- Ghost Playback System
-- Timed Ghost Expiration
-- Door and Button Interactions
-- Level Reset Logic
-- Respawn System
-- Camera Follow System
-- Pixel Perfect Rendering
+- Background music and sound assets sourced from royalty-free resources.
+https://www.gequhai.com/play/1936802
 
 ---
 
-## Development Status
+## AI / Tutorial / Template Use
 
-### Current Status
+### AI Assistance
 
-Playable Vertical Slice Complete
+ChatGPT was used during development for:
 
-### Implemented
+- Code debugging assistance
+- UI design suggestions
+- Development planning
 
-- Five playable levels
-- Complete puzzle progression
-- Ghost replay system
-- Timed ghost mechanic
-- Cooperative puzzle mechanics
-- Platforming challenges
-- Pixel-art visual prototype
+All final implementation, integration, testing, and project decisions were completed by the developer.
 
-### Planned Improvements
+### Tutorials and References
 
-- Main menu
-- Intro story sequence
-- Ending sequence
-- Sound effects
-- Background music
-- Visual polish
-- Additional bug fixing and balancing
+External tutorials and Unity documentation were referenced during development for:
+
+- Unity UI systems
+- Scene management
+- Audio systems
+- General Unity workflow
 
 ---
 
-## Project Structure
+## Development Log
 
-```text
-Level 1 → Replay Introduction
-        ↓
-Level 2 → Platforming Challenge
-        ↓
-Level 3 → Timed Ghost
-        ↓
-Level 4 → Dual-Button Cooperation
-        ↓
-Level 5 → Final Combined Challenge
-```
+Development progress was tracked through:
+
+- GitHub Issues
+- GitHub Project Kanban Board
+- Git Commit History
+
+Please refer to the repository Issues and Project Board for the complete development log.
 
 ---
 
-## Screenshots
+## Project Vision
 
-Add gameplay screenshots here.
+Rewind Protocol explores the idea of solving problems by collaborating with your past self.
 
-<img width="1512" height="949" alt="image" src="https://github.com/user-attachments/assets/2cad290d-c791-443e-ba6e-ba2048953140" />
-
----
-
-## Author
-
-Yixuan Liu
-
-University Game Development Project
-
-2026
+Through a combination of time replay mechanics, environmental puzzles, and a minimalist sci-fi atmosphere, the game challenges players to think about actions not only in the present but also across multiple timelines.
