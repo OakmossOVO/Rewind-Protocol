@@ -57,7 +57,7 @@ public class PlayerRecorder : MonoBehaviour
     void StartRecording()
     {
         recordedFlipX.Clear();
-        
+
         if (spawnedGhosts.Count >= maxGhosts)
         {
             Debug.Log("Ghost limit reached!");
@@ -188,6 +188,24 @@ public class PlayerRecorder : MonoBehaviour
     public void CompleteLevel()
     {
         levelCompleted = true;
+
+        foreach (GameObject ghost in spawnedGhosts)
+        {
+            if (ghost != null)
+            {
+                GhostPlayback playback = ghost.GetComponent<GhostPlayback>();
+
+                if (playback != null)
+                {
+                    playback.StopGhostTimer();
+                }
+            }
+        }
+
+        if (ghostTimerText != null)
+        {
+            ghostTimerText.gameObject.SetActive(false);
+        }
     }
 
     public void ResetCurrentAttempt()

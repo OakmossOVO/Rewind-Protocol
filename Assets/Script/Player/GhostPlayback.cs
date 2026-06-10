@@ -94,4 +94,14 @@ public class GhostPlayback : MonoBehaviour
         OnGhostExpired?.Invoke();
         Destroy(gameObject);
     }
+
+    public void StopGhostTimer()
+    {
+        StopAllCoroutines();
+
+        if (timerText != null)
+        {
+            timerText.gameObject.SetActive(false);
+        }
+    }
 }
