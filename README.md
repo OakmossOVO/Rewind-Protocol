@@ -151,13 +151,17 @@ https://www.gequhai.com/play/1936802
 
 ### AI Assistance
 
-ChatGPT was used during development for:
+ChatGPT was used as a development support tool throughout the project.
 
-- Code debugging assistance
-- UI design suggestions
-- Development planning
+AI assistance was used for:
 
-All final implementation, integration, testing, and project decisions were completed by the developer.
+- Brainstorming and refining the core gameplay concept
+- Planning the level progression and difficulty curve
+- Debugging Unity and C# scripting issues
+- Explaining Unity workflows such as scene management, UI setup, Pixel Perfect Camera settings, and build preparation
+- Helping organize the intro, mid-game, and ending story sequences
+
+All final implementation decisions, Unity scene setup, asset integration, code testing, bug fixing, gameplay tuning, and final project submission were completed by the developer.
 
 ### Tutorials and References
 
