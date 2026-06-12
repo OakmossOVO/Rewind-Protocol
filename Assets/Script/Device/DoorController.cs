@@ -1,5 +1,28 @@
 using UnityEngine;
 
+/*
+ * Purpose:
+ * Opens a door only when both pressure and touch button conditions are active.
+ *
+ * Attached GameObject:
+ * Door GameObject controlled by multiple button inputs.
+ *
+ * Main responsibilities:
+ * Store open and closed positions, move the door smoothly, track pressure and touch button states,
+ * and decide whether the door should be open or closed.
+ *
+ * Inputs:
+ * Open height, move speed, pressure button state, and touch button state.
+ *
+ * Outputs or effects:
+ * Moves the door transform and updates the open or closed state based on linked button inputs.
+ *
+ * Authorship or assistance:
+ * Project script maintained with AI assistance for documentation comments.
+ *
+ * Testing notes:
+ * Test all button state combinations, smooth door movement, final open and closed positions, and repeated state changes.
+ */
 public class DoorController : MonoBehaviour
 {
     public float openHeight = 3f;

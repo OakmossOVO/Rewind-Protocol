@@ -1,5 +1,27 @@
 using UnityEngine;
 
+/*
+ * Purpose:
+ * Opens or closes a simple vertical door controlled by a pressure button.
+ *
+ * Attached GameObject:
+ * Door GameObject that should move upward when opened and return to its starting position when closed.
+ *
+ * Main responsibilities:
+ * Store closed and open positions, move toward the current target position, and respond to pressure button state changes.
+ *
+ * Inputs:
+ * Open height, move speed, and pressure button activation state.
+ *
+ * Outputs or effects:
+ * Moves the door transform between closed and open positions.
+ *
+ * Authorship or assistance:
+ * Project script maintained with AI assistance for documentation comments.
+ *
+ * Testing notes:
+ * Test opening and closing from the assigned button, movement speed, final positions, and repeated activation changes.
+ */
 public class Door : MonoBehaviour
 {
     public float openHeight = 3f;

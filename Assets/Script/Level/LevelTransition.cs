@@ -3,6 +3,29 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/*
+ * Purpose:
+ * Runs the visual transition from a completed level to the next scene.
+ *
+ * Attached GameObject:
+ * Scene transition manager GameObject referenced by the exit portal.
+ *
+ * Main responsibilities:
+ * Disable player control, move the player into the portal, dissolve the player sprite,
+ * fade the screen, and load the configured next scene.
+ *
+ * Inputs:
+ * Player GameObject, portal Transform, fade overlay image, timing values, and next scene name.
+ *
+ * Outputs or effects:
+ * Changes player movement, physics velocity, transform, sprite color and scale, fade overlay alpha, and scene loading.
+ *
+ * Authorship or assistance:
+ * Project script maintained with AI assistance for documentation comments.
+ *
+ * Testing notes:
+ * Test portal transition once per level, player movement lockout, dissolve visuals, fade timing, and loading the correct next scene.
+ */
 public class LevelTransition : MonoBehaviour
 {
     [Header("Fade")]

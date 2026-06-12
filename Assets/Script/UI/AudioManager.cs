@@ -1,6 +1,29 @@
 using System.Collections;
 using UnityEngine;
 
+/*
+ * Purpose:
+ * Provides persistent background music control across scenes.
+ *
+ * Attached GameObject:
+ * Persistent audio manager GameObject with an AudioSource component.
+ *
+ * Main responsibilities:
+ * Enforce a singleton instance, persist between scene loads, configure the AudioSource,
+ * play menu, gameplay, and ending music clips, and optionally log playback state.
+ *
+ * Inputs:
+ * Menu, game, and ending AudioClip references, music volume, logging flag, and calls from UI or scene scripts.
+ *
+ * Outputs or effects:
+ * Starts, stops, and swaps AudioSource clips; updates AudioListener and AudioSource settings; logs missing clips or playback details.
+ *
+ * Authorship or assistance:
+ * Project script maintained with AI assistance for documentation comments.
+ *
+ * Testing notes:
+ * Test singleton persistence, duplicate manager destruction, clip switching between scenes, volume setting, and missing clip warnings.
+ */
 [RequireComponent(typeof(AudioSource))]
 public class AudioManager : MonoBehaviour
 {

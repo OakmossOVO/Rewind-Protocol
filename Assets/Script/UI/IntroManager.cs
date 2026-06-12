@@ -3,6 +3,28 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+ * Purpose:
+ * Plays the opening story sequence before loading the first gameplay scene.
+ *
+ * Attached GameObject:
+ * Intro scene UI manager GameObject with a TextMeshProUGUI story text reference.
+ *
+ * Main responsibilities:
+ * Type each intro page character by character, wait between pages, allow Space to skip, and load the configured next scene.
+ *
+ * Inputs:
+ * Story text UI reference, intro page text array, type speed, page delay, Space key, and next scene name.
+ *
+ * Outputs or effects:
+ * Updates story text content over time and loads the next scene.
+ *
+ * Authorship or assistance:
+ * Project script maintained with AI assistance for documentation comments.
+ *
+ * Testing notes:
+ * Test full intro playback, Space skip, page timing, missing story text reference, and correct first scene loading.
+ */
 public class IntroManager : MonoBehaviour
 {
     public TextMeshProUGUI storyText;

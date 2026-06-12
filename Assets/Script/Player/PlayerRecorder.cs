@@ -3,6 +3,29 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+/*
+ * Purpose:
+ * Records the player's movement and creates a ghost replay for time-based puzzle solving.
+ *
+ * Attached GameObject:
+ * Player GameObject with Rigidbody2D, SpriteRenderer, PlayerMovement, and this recorder component.
+ *
+ * Main responsibilities:
+ * Start recording automatically, stop recording on command, spawn and configure the ghost, hide and respawn the player,
+ * update hint and timer UI, and reset the current attempt when the ghost expires before level completion.
+ *
+ * Inputs:
+ * E key, current player transform positions, SpriteRenderer flip states, ghost prefab, UI text references, and scene state.
+ *
+ * Outputs or effects:
+ * Instantiates ghost replay objects, changes player visibility and physics simulation, updates UI text, and reloads the active scene when needed.
+ *
+ * Authorship or assistance:
+ * Project script maintained with AI assistance for documentation comments.
+ *
+ * Testing notes:
+ * Test recording completion with E, ghost playback path accuracy, player respawn, timer visibility, level completion, and reset behavior.
+ */
 public class PlayerRecorder : MonoBehaviour
 {
     public GameObject ghostPrefab;

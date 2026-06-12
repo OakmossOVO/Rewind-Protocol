@@ -1,5 +1,28 @@
 using UnityEngine;
 
+/*
+ * Purpose:
+ * Smoothly follows the player horizontally while keeping the camera inside level bounds.
+ *
+ * Attached GameObject:
+ * Main Camera GameObject with a Camera component.
+ *
+ * Main responsibilities:
+ * Track a target Transform, preserve the camera's starting Y and Z positions, calculate orthographic camera limits,
+ * clamp the target X position within world bounds, and smooth the camera movement.
+ *
+ * Inputs:
+ * Target Transform, smooth speed, camera orthographic size and aspect ratio, and configured world bounds.
+ *
+ * Outputs or effects:
+ * Updates the camera transform position each LateUpdate.
+ *
+ * Authorship or assistance:
+ * Project script maintained with AI assistance for documentation comments.
+ *
+ * Testing notes:
+ * Test following at both level edges, levels narrower than the camera view, missing target handling, and smooth movement speed.
+ */
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;
@@ -37,7 +60,7 @@ public class CameraFollow : MonoBehaviour
         }
         else
         {
-            // 如果关卡宽度比摄像机视野还窄，就固定在关卡中心
+            // If the level is narrower than the camera view, lock the camera to the level center.
             targetX = (leftBound + rightBound) / 2f;
         }
 

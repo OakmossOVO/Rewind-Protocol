@@ -3,6 +3,28 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+ * Purpose:
+ * Plays the mid-game story text sequence before loading the next gameplay scene.
+ *
+ * Attached GameObject:
+ * Mid-scene UI manager GameObject with a TextMeshProUGUI story text reference.
+ *
+ * Main responsibilities:
+ * Type each story page character by character, wait between pages, skip forward on Space, and load the configured next scene.
+ *
+ * Inputs:
+ * Story text UI reference, page text array, type speed, page delay, Space key, and next scene name.
+ *
+ * Outputs or effects:
+ * Updates story text content over time and loads the next scene.
+ *
+ * Authorship or assistance:
+ * Project script maintained with AI assistance for documentation comments.
+ *
+ * Testing notes:
+ * Test full text playback, Space skip, page timing, missing story text reference, and correct next scene loading.
+ */
 public class MidManager : MonoBehaviour
 {
     public TextMeshProUGUI storyText;
