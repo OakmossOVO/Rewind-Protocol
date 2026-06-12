@@ -142,8 +142,9 @@ Final puzzle challenge combining previously introduced mechanics.
 
 ### Audio
 
-- Background music and sound assets sourced from royalty-free resources.
-https://www.gequhai.com/play/1936802
+BGM: S.T.A.Y (Hans Zimmer)
+Copyright © WaterTower Music / Warner Bros.
+This project is for educational purposes only, not for commercial use.
 
 ---
 
