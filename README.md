@@ -142,9 +142,11 @@ Final puzzle challenge combining previously introduced mechanics.
 
 ### Audio
 
-- BGM: S.T.A.Y (Hans Zimmer)
-- Copyright © WaterTower Music / Warner Bros.
-- This project is for educational purposes only, not for commercial use.
+BGM: S.T.A.Y (Hans Zimmer)
+
+Copyright © WaterTower Music / Warner Bros.
+
+This project is for educational purposes only, not for commercial use.
 
 ---
 
