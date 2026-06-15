@@ -161,6 +161,7 @@ AI assistance was used for:
 - Debugging Unity and C# scripting issues
 - Explaining Unity workflows such as scene management, UI setup, Pixel Perfect Camera settings, and build preparation
 - Helping organize the intro, mid-game, and ending story sequences
+- Generating a small number of visual assets and reference images used in the game's UI and icon
 
 All final implementation decisions, Unity scene setup, asset integration, code testing, bug fixing, gameplay tuning, and final project submission were completed by the developer.
 
